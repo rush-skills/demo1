@@ -29,10 +29,19 @@
             <li class=""><a href="/users">Users</a></li>
             <%end%>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <% if user_signed_in? %><%= current_user.name %><% else %>Not Logged In<% end %><b class="caret"></b></a>
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Links<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class=""><a href="http://aiesec.in">AIESEC.IN</a></li>
+                <li class=""><a href="http://aiesec.org">AIESEC.ORG</a></li>
+                <li class=""><a href="#">Blogs</a></li>
+                <li class=""><a href="#">Cultural Shock</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><% if user_signed_in? %><%= current_user.name %><% else %>Not Logged In<% end %><b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <% if user_signed_in? %>
-                  <li class=""><%if current_user.form1 %> <%=link_to "Reached Delhi?",current_user.form1%> <%else%> <%=link_to "Form1", new_form1_path%> <%end%></li>
+                  <li class=""><%if current_user.form1 %> <%=link_to "Reached Delhi?",current_user.form1%> <%else%> <%=link_to "Reached Delhi?", new_form1_path%> <%end%></li>
                   <!-- <li class=""><%if current_user.form2 %> <%=link_to "Form2",current_user.form2%> <%else%> <%=link_to "Form2", new_form2_path%> <%end%></li>
  -->
                   <li><%= link_to "My Profile", :controller => 'users', :action => 'profile'%> </li>
@@ -42,6 +51,7 @@
                 <% end %>
               </ul>
             </li>
+
           </ul>
         </div><!--/.nav-collapse -->
       </div>
