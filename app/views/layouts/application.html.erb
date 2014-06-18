@@ -24,14 +24,17 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav pull-right">
             <li class=""><a href="/home">Home</a></li>
-            
+            <% if user_signed_in? %>
+            <li class=""><a href="/projects">Projects</a></li>
+            <li class=""><a href="/users">Users</a></li>
+            <%end%>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <% if user_signed_in? %><%= current_user.name %><% else %>Not Logged In<% end %><b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <% if user_signed_in? %>
-                  <li class=""><%if current_user.form1 %> <%=link_to "Form1",current_user.form1%> <%else%> <%=link_to "Form1", new_form1_path%> <%end%></li>
-                  <li class=""><%if current_user.form2 %> <%=link_to "Form2",current_user.form2%> <%else%> <%=link_to "Form2", new_form2_path%> <%end%></li>
-
+                  <li class=""><%if current_user.form1 %> <%=link_to "Reached Delhi?",current_user.form1%> <%else%> <%=link_to "Form1", new_form1_path%> <%end%></li>
+                  <!-- <li class=""><%if current_user.form2 %> <%=link_to "Form2",current_user.form2%> <%else%> <%=link_to "Form2", new_form2_path%> <%end%></li>
+ -->
                   <li><%= link_to "My Profile", :controller => 'users', :action => 'profile'%> </li>
                   <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
                 <% else %>

@@ -14,4 +14,7 @@ class UsersController < ApplicationController
 	def home
 		@user = current_user
 	end
+	def showall
+		@users = User.all
+	end
 end

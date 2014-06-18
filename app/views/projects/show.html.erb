@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @project.name %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @project.country %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @project.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @project.end_date %>
+</p>
+
+<p>
+  <b>Brief description:</b>
+  <%= @project.brief_description %>
+</p>
+
+<p>
+  <b>Job description:</b>
+  <%= @project.job_description %>
+</p>
+
+<p>
+  <b>Work information:</b>
+  <%= @project.work_information %>
+</p>
+
+<p>
+  <b>Skills:</b>
+  <%= @project.skills %>
+</p>
+
+<p>
+  <b>Language:</b>
+  <%= @project.language %>
+</p>
+
+<p>
+  <b>Other details:</b>
+  <%= @project.other_details %>
+</p>
+
+<p>
+  <b>Apply date:</b>
+  <%= @project.apply_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

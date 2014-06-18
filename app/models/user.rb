@@ -1,7 +1,4 @@
 class User < ActiveRecord::Base
-  has_many :photos
-  has_many :likes, :through => :photos
-  has_many :comments, :through => :photos
   has_one :profile
   has_one :form1
   has_one :form2

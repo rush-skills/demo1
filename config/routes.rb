@@ -1,4 +1,7 @@
 Bpt2::Application.routes.draw do
+  resources :projects
+
+
   resources :form2s
 
 
@@ -26,7 +29,7 @@ Bpt2::Application.routes.draw do
   match "home", :to => "users#home"
   match "profile", :to => "users#profile"
   match "myphotos", :to => "photos#index_user"
-  
+  match "users", :to => "users#showall"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
