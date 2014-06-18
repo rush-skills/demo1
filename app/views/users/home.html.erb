@@ -1,0 +1,4 @@
+<h1>Links to</h1>
+<% if @user.profile %> <%= link_to "profile", "profile" %> <%end%><br/>
+<%if @user.form1 %> <%=link_to "View and Edit Form1",@user.form1%> <%else%> <%=link_to "New Form1", new_form1_path%> <%end%><br/>
+<%if @user.form2 %> <%=link_to "View and Edit Form2",@user.form2%> <%else%> <%=link_to "New Form2", new_form2_path%> <%end%><br/>

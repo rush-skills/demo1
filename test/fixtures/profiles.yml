@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tn_id: MyString
+  tn_manager: MyString
+  client_name: MyString
+  accommodation_name: MyString
+  accommodation_fee: MyString
+  flight_details: MyText
+  fb_link: MyString
+  country: MyString
+  profile_pic: MyString
+  expectations: MyText
+  User: 
+
+two:
+  tn_id: MyString
+  tn_manager: MyString
+  client_name: MyString
+  accommodation_name: MyString
+  accommodation_fee: MyString
+  flight_details: MyText
+  fb_link: MyString
+  country: MyString
+  profile_pic: MyString
+  expectations: MyText
+  User: 

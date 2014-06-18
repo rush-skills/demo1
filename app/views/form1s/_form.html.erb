@@ -1,0 +1,29 @@
+<%= form_for(@form1) do |f| %>
+  <% if @form1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@form1.errors.count, "error") %> prohibited this form1 from being saved:</h2>
+
+      <ul>
+      <% @form1.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "Were you picked up on time?" %><br />
+    <%= f.text_field :q1 %>
+  </div>
+  <div class="field">
+    <%= f.label "Are you satisfied with the accommodation? If not mention." %><br />
+    <%= f.text_area :q2 %>
+  </div>
+  <div class="field">
+    <%= f.label "Any other issues." %><br />
+    <%= f.text_area :q3 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,63 @@
+
+
+<p>
+  <b>name: </b>
+  <%= @ofuser.name %>
+</p>
+
+<p>
+  <b>Email: </b>
+  <%= @ofuser.email %>
+</p>
+
+<p>
+  <b>Tn:</b>
+  <%= @ofuser.profile.tn_id %>
+</p>
+
+<p>
+  <b>Tn manager:</b>
+  <%= @ofuser.profile.tn_manager %>
+</p>
+
+<p>
+  <b>Client name:</b>
+  <%= @ofuser.profile.client_name %>
+</p>
+
+<p>
+  <b>Accommodation name:</b>
+  <%= @ofuser.profile.accommodation_name %>
+</p>
+
+<p>
+  <b>Accommodation fee:</b>
+  <%= @ofuser.profile.accommodation_fee %>
+</p>
+
+<p>
+  <b>Flight details:</b>
+  <%= @ofuser.profile.flight_details %>
+</p>
+
+<p>
+  <b>Fb link:</b>
+  <%= @ofuser.profile.fb_link %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @ofuser.profile.country %>
+</p>
+
+<p>
+  <b>Profile pic:</b>
+  <%= @ofuser.profile.profile_pic %>
+</p>
+
+<p>
+  <b>Expectations:</b>
+  <%= @ofuser.profile.expectations %>
+</p>
+
+<%= link_to 'Edit', edit_profile_path(@ofuser.profile)%>

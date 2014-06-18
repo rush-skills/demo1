@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Demo AIESEC DU</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/home">AIESEC DU DEMO</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav pull-right">
+            <li class=""><a href="/home">Home</a></li>
+            
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <% if user_signed_in? %><%= current_user.name %><% else %>Not Logged In<% end %><b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <% if user_signed_in? %>
+                  <li class=""><%if current_user.form1 %> <%=link_to "Form1",current_user.form1%> <%else%> <%=link_to "Form1", new_form1_path%> <%end%></li>
+                  <li class=""><%if current_user.form2 %> <%=link_to "Form2",current_user.form2%> <%else%> <%=link_to "Form2", new_form2_path%> <%end%></li>
+
+                  <li><%= link_to "My Profile", :controller => 'users', :action => 'profile'%> </li>
+                  <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+                <% else %>
+                  <li><li><%= link_to "Sign in/Sign Up", new_user_session_path %></li>
+                <% end %>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+
+  <div class="container marketing">
+    <% if flash[:notice] %>
+      <div class="alert alert-info">
+        <p><%= flash[:notice]%></p>
+      </div>
+    
+    <%end%>
+    <%= yield %>
+
+    <hr class="featurette-divider">
+    <footer>
+      <div class="center">
+        <p>Creator: CIM</p></div>
+    </footer>
+
+  </div>
+
+</body>
+</html>

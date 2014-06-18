@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Were you picked up on time?</b>
+  <%= @form1.q1 %>
+</p>
+
+<p>
+  <b>Are you satisfied with the accommodation. If not mention.</b>
+  <%= @form1.q2 %>
+</p>
+
+<p>
+  <b>Any other issues.</b>
+  <%= @form1.q3 %>
+</p>
+
+
+<%= link_to 'Edit', edit_form1_path(@form1) %> 

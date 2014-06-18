@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  q1: MyText
+  q2: MyString
+  q3: MyText
+  q4: MyString
+  User: 
+
+two:
+  q1: MyText
+  q2: MyString
+  q3: MyText
+  q4: MyString
+  User: 
